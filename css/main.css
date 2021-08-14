@@ -1,0 +1,110 @@
+*, *:before, *:after{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+.left-col{
+    background: #5200ff;
+    color: #fff;
+    position: relative;
+    text-align: center;
+}
+
+.left-col:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.22;
+    background-image: url(../photos/bg.jpg);
+    background-size: cover;
+    background-position: 100%;
+}
+
+.container{
+    position: relative;
+}
+
+.left-col, .right-col{
+    padding: 6.75rem 8vw;
+}
+
+h1{
+    margin-top: 0;
+    font-size: 4rem;
+    font-weight: normal;
+    line-height: 1.2em;
+    font-family: 'Bebas Neue', cursive;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+label{
+    display: block;
+    font-size: 1.125rem;
+    margin-bottom: 0.77rem;
+}
+input{
+    width: 100%;
+    background: #ededed;
+    border: 1px solid #c7c7c7;
+    font-size: 1rem;
+    padding: 0.75rem;
+    outline: none;
+    margin-bottom: 2.5em;
+}
+
+input[type='text']:focus,
+input[type='email']:focus{
+    border: 2px solid black;
+}
+
+.btn{
+    width: 100%;
+    background: #5200ff;
+    padding: 1em;
+    color: #fff;
+    border: none;
+    font-size: 1.125rem;
+    cursor: pointer;
+    transform: scale(1);
+    transition: all 250ms;
+}
+.btn:hover{
+    transform: scale(0.9);
+}
+
+@media only screen and (min-width: 770px){
+    .form{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 2em;
+    }
+    .btn{
+        width: auto;
+        padding: 1em 2.5em;
+    }
+}
+@media only screen and (min-width:1260px){
+    body{
+        display: flex;
+
+    }
+    .left-col, .right-col{
+        flex-basis: 0;
+        flex-grow: 1;
+        height: 100vh;
+        display: grid;
+        place-items: center;
+    }
+    .left-col{
+        text-align: right;
+    }
+}
